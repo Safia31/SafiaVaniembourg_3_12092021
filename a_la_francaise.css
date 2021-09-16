@@ -1,5 +1,21 @@
+*{
+    font-family: "Roboto";
+}
+
 body{
     margin: 0;
+}
+
+header a{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.headerlogo{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
 .background img{
