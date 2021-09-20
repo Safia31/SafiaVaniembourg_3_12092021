@@ -18,14 +18,18 @@ body{
     background-color: #F2F2F2;
     font-size: 18px;
     font-weight: bolder;
-    padding-top: 5px;
-    padding-bottom: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .search i{
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.search p{
+    margin: 10px;
 }
 
 .title{
@@ -194,3 +198,27 @@ h5{
 a{
     text-decoration: none;
 }
+
+/*Responsive Desktop*/
+
+@media all and (min-width: 768px) and (max-width: 1280px){
+
+.headerlogo{
+    margin: 20px;
+}
+
+.headerlogo img{
+    width: 400px;
+}
+
+.search i{
+    font-size: 30px;
+}
+
+.search p{
+    font-size: 25px;
+}
+
+
+}
+
