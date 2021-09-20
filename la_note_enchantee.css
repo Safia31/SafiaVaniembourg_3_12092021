@@ -2,22 +2,251 @@
     font-family: "Roboto";
 }
 
+* h1{
+    font-family: "Shrikhand";
+}
+
 body{
     margin: 0;
 }
 
-header a{
+header{
+    padding: 5px;
+}
+
+header i{
     position: absolute;
-    left: 30px;
-    top: 30px;
+    left: 25px;
+    top: 25px;
+    display: flex;
+    font-size: 20px;
+    color: black;
 }
 
 .headerlogo{
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .background img{
-    width: 375px;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.container{
+    box-sizing: border-box;
+    border-radius: 40px 40px 0px 0px;
+    background: #F2F2F2;
+    position: relative;
+    bottom: 50px;
+}
+
+.titrerestaurant{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titrerestaurant h1{
+    display: flex;
+    margin-top: 20px;
+    font-family: "Shrikhand";
+    font-size: 28px;
+}
+
+.titrerestaurant i{
+    display: flex;
+    font-size: 25px;
+}
+
+.titreentree{
+    margin: 10px 10px 30px 20px;
+    border-bottom: 3px solid #99E2D0;
+    width: 17%;
+}
+
+.titreentree h2{
+    margin: 0;
+    font-size: 18px;
+}
+
+.boxentree{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10px 30px 10px;
+}
+
+.entree{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.entree h3{
+    margin: 10px;
+}
+
+.entree p{
+    margin: 0px 0px 0px 10px;
+}
+
+.entree span{
+    position: relative;
+    left: 290px;
+    bottom: 20px;
+}
+
+.titreplat{
+    margin: 10px 10px 30px 20px;
+    border-bottom: 3px solid #99E2D0;
+    width: 17%;
+}
+
+.titreplat h2{
+    margin: 0;
+    font-size: 18px;
+}
+
+.boxplat{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10px 30px 10px;
+}
+
+.plat{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.plat h3{
+    margin: 10px;
+}
+
+.plat p{
+    margin: 0px 0px 0px 10px;
+}
+
+.plat span{
+    position: relative;
+    left: 290px;
+    bottom: 20px;
+}
+
+.titredessert{
+    margin: 10px 10px 30px 20px;
+    border-bottom: 3px solid #99E2D0;
+    width: 17%;
+}
+
+.titredessert h2{
+    margin: 0;
+    font-size: 18px;
+}
+
+.boxdessert{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10px 30px 10px;
+}
+
+.dessert{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.dessert h3{
+    margin: 10px;
+}
+
+.dessert p{
+    margin: 0px 0px 0px 10px;
+}
+
+.dessert span{
+    position: relative;
+    left: 290px;
+    bottom: 20px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    align-items: center;
+    box-shadow: 0px 5px 5px 0px grey;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 0;
+}
+
+footer{
+    background: #353535;
+    position: relative;
+    top: 50px;
+}
+
+.footerlogo{
+    margin-bottom: 20px;
+}
+
+footer h2{
+    font-family: "Shrikhand";
+    color: white;
+    margin: 0px 0px 10px 20px;
+}
+
+.list{
+    margin-left: 10px;
+}
+
+.list i{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+footer a{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+h5{
+    margin: 5px 0px 5px 0px;
+    font-size: 16px;  
+
+}
+
+a{
+    text-decoration: none;
 }
