@@ -254,3 +254,163 @@ h5{
 a{
     text-decoration: none;
 }
+
+/* Responsive Desktop */
+
+@media only screen and (min-width: 1024px)
+{
+
+    body{
+        margin: auto;
+        max-width: initial;
+    }
+
+    header i{
+        left: 70px;
+        font-size: 30px;
+    }
+
+    .headerlogo img{
+        width: 300px;
+    }
+
+    .background{
+        display: flex;
+        justify-content: center;
+    }
+
+    .background img{
+        width: 650px;
+        height: 300px;
+    }
+
+    .container{
+        margin-top: 30px;
+        position: initial;
+        border-radius: initial;
+    }
+
+    .titrerestaurant{
+        align-items: initial;
+        justify-content: center;
+    }
+
+    .titrerestaurant h1{
+        justify-content: initial;
+        align-items: initial;
+        margin-left: 0;
+        font-size: 40px;
+    }
+
+    .titrerestaurant i{
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        margin-left: 100px;
+    }
+
+    .boxentree{
+        box-sizing: border-box;
+        border-radius: 30px 30px 30px 30px;
+        border: 2px solid #99E2D0;
+    }
+
+    .titreentree{
+        margin: 30px;
+        width: initial;
+        border-bottom: none;
+    }
+
+    .titreentree h2{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-size: 35px;
+        font-family: "Shrikhand";
+        color: #99E2D0;
+    }
+
+    .choixentree{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    .entree{
+        width: 30%;
+    }
+
+    .boxplat{
+        box-sizing: border-box;
+        border-radius: 30px 30px 30px 30px;
+        border: 2px solid #99E2D0;
+    }
+
+    .titreplat{
+        margin: 30px;
+        width: initial;
+        border-bottom: none;
+    }
+
+    .titreplat h2{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-size: 35px;
+        font-family: "Shrikhand";
+        color: #99E2D0;
+    }
+
+    .choixplat{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    .plat{
+        width: 30%;
+    }
+
+    .boxdessert{
+        box-sizing: border-box;
+        border-radius: 30px 30px 30px 30px;
+        border: 2px solid #99E2D0;
+    }
+
+    .titredessert{
+        margin: 30px;
+        width: initial;
+        border-bottom: none;
+    }
+
+    .titredessert h2{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-size: 35px;
+        font-family: "Shrikhand";
+        color: #99E2D0;
+    }
+
+    .choixdessert{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    .dessert{
+        width: 30%;
+    }
+
+    .btn button{
+        margin: 40px;
+    }
+
+    .footerlogo h2{
+        font-size: 40px;
+    }
+
+}

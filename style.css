@@ -87,7 +87,6 @@ button{
 .choice i{
     position: relative;
     margin-right: 30px;
-    color: grey;
     width: 16px;
     height: 16px;
 }
@@ -109,6 +108,14 @@ span{
 .choice h4{
     margin-right: 20px;
     width: 178px;
+}
+
+.fa-list-ul, .fa-mobile-alt{
+    color: grey;
+}
+
+.fa-store{
+    color: #9356DC;
 }
 
 .deux{
@@ -192,33 +199,140 @@ footer a{
 h5{
     margin: 5px 0px 5px 0px;
     font-size: 16px;  
-
 }
 
 a{
     text-decoration: none;
 }
 
+
 /*Responsive Desktop*/
 
-@media all and (min-width: 768px) and (max-width: 1280px){
+@media only screen and (min-width: 1024px)
+{
+    body{
+        margin: 0;
+    }
 
-.headerlogo{
-    margin: 20px;
-}
+    .headerlogo{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
-.headerlogo img{
-    width: 400px;
-}
+    .headerlogo img{
+        width: 400px;
+    }
 
-.search i{
-    font-size: 30px;
-}
+    .search i{
+        font-size: 30px;
+    }
 
-.search p{
-    font-size: 25px;
-}
+    .search p{
+        font-size: 25px;
+    }
 
+    .title h1{
+        font-family: "Shrikhand";
+        font-size: 40px;
+    }
 
+    .title p{
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .btn button{
+        margin: 0;
+    }
+
+    .une{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fonctionnement{
+        margin-left: 30px;
+    }
+
+    .fonctionnement h2{
+        font-size: 30px;
+        font-family: "Shrikhand";
+        color: #9356DC;
+    }
+
+    .menuchoice{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 10px;
+    }
+
+    .choice i{
+        color: grey;
+    }
+
+    .restaurant{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .restaurant h2{
+        font-size: 30px;
+        font-family: "Shrikhand";
+        color: #9356DC;
+    }
+
+    .deux{
+        background: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 30px;
+        background: #F2F2F2;
+        border: 2px solid #9356DC;
+    }
+
+    .card a{
+        margin: 20px;
+    }
+
+    article{
+        width: 350px;
+        height: 230px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 5px;
+    }
+
+    article img{
+        width: 350px;
+    }
+
+    article i{
+        position: relative;
+        left: 270px;
+        font-size: 20px;
+    }
+
+    .footerlogo{
+        margin-top: 20px;
+    }
+
+    .footerlogo h2{
+        color: #9356DC;
+        font-size: 40px;
+    }
 }
 
