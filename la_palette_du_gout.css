@@ -33,7 +33,8 @@ header i{
 .background img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .container{
@@ -90,6 +91,21 @@ header i{
     width: 100%;
     height: 100%;
     position: relative;
+    cursor: pointer;
+}
+
+.checkentree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #99E2D0;
+    width: 60px;
+    height: 45px;
+}
+
+.fa-check-circle{
+    color: white;
+    font-size: 25px;
 }
 
 .entree h3{
@@ -104,6 +120,17 @@ header i{
     position: absolute;
     right: 20px;
     bottom: 20px;
+}
+
+.checkplat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 45px;
+    background: #99E2D0;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .titreplat{
@@ -145,7 +172,16 @@ header i{
 .plat span{
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 60px;
+}
+
+.checkplat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 65px;
+    background: #99E2D0;
 }
 
 .titredessert{
@@ -187,7 +223,21 @@ header i{
 .dessert span{
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 60px;
+}
+
+.checkdessert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 65px;
+    background: #99E2D0;
+}
+
+.fa-check-circle{
+    color: white;
+    font-size: 25px;
 }
 
 .btn{
@@ -264,7 +314,7 @@ a{
         margin: auto;
         max-width: initial;
     }
-
+     
     header i{
         left: 70px;
         font-size: 30px;
@@ -290,11 +340,6 @@ a{
         border-radius: initial;
     }
 
-    .titrerestaurant{
-        align-items: initial;
-        justify-content: center;
-    }
-
     .titrerestaurant h1{
         justify-content: initial;
         align-items: initial;
@@ -302,11 +347,53 @@ a{
         font-size: 40px;
     }
 
-    .titrerestaurant i{
+    .coeur{
+        width: 30px;
+        height: 25px;
+        position: relative;
         display: flex;
-        font-size: 35px;
+        justify-content: center;
         align-items: center;
-        margin-left: 100px;
+        cursor: pointer;
+        border: 0 solid transparent;
+        background:linear-gradient(#FF79DC, #9356DC);
+    }
+
+    .coeur::before{
+        opacity: 0;
+        transition: 0.5s;
+        content: "";
+    }
+
+    .coeur:hover::before{
+        opacity: 1;
+    }
+
+    .coeur:hover .far.fa-heart{
+        opacity: 0;
+    }
+
+    .far.fa-heart, .fas.fa-heart{
+        position: absolute;
+        transition-duration: 0.25s;
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        mix-blend-mode: lighten;
+        width: 100%;
+        height: 100%;
+    }
+/* Animation coeur */
+
+    @keyframes opacity{
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
     }
 
     .boxentree{
@@ -335,10 +422,129 @@ a{
         flex-direction: row;
         justify-content: space-around;
         margin: 20px;
+        -webkit-animation: scale-y 0.5s 1s linear both;
+                animation: scale-y 0.5s 1s linear both;
+        transform-origin: top;
+        overflow: hidden;
+    }
+
+/* Animation defilement */
+
+    @-webkit-keyframes scale-y {
+        0%{
+            transform: scaleY(0);
+        }
+
+        100%{
+            transform: scaleY(1);
+        }
+    }
+
+    @keyframes scale-y {
+        0%{
+            transform: scaleY(0);
+        }
+
+        100%{
+            transform: scaleY(1);
+        }
     }
 
     .entree{
         width: 30%;
+        height: 82%;
+        overflow: hidden;
+    }
+
+    .entree:hover{
+        cursor: pointer;
+
+    }
+
+    .entree h3, p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .entree span{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: -35px 20px 20px 10px;
+        position: initial;
+    }
+
+    @-webkit-keyframes translate-x{
+       0%{
+           transform: translateX(0);
+       }
+
+       100%{
+           transform: translateX(1);
+       }
+    }
+
+    @keyframes translate-x{
+       0%{
+           transform: translateX(0);
+       }
+
+       100%{
+           transform: translateX(1);
+       }
+    }
+
+    .checkentree{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 70px;
+        background: #99E2D0;
+        cursor: pointer;
+        border-radius: 0px 20px 20px 0px;
+        margin: -81px -60px 0px auto;
+        transform-origin: left;
+        transform: translate(0);
+        transition: 0.5s;
+    }
+
+    .checkentree:hover{
+        cursor: pointer;
+        -webkit-animation: translate-x 0.5s 0s linear both;
+                animation: translate-x 0.5s 0s linear both;
+    }
+
+    .entree:hover .checkentree{
+        margin-right: 0px;
+    }
+
+/* Animation menu */
+
+    @-webkit-keyframes translate-x{
+        0%{
+            transform: translateX(0);
+        }
+ 
+        100%{
+            transform: translateX(1);
+        }
+     }
+ 
+     @keyframes translate-x{
+        0%{
+            transform: translateX(0);
+        }
+ 
+        100%{
+            transform: translateX(1);
+        }
+     }
+
+    .fa-check-circle{
+        color: white;
+        font-size: 25px;
     }
 
     .boxplat{
@@ -367,10 +573,80 @@ a{
         flex-direction: row;
         justify-content: space-around;
         margin: 20px;
+        -webkit-animation: scale-y 0.5s 1.5s linear both;
+                animation: scale-y 0.5s 1.5s linear both;
+        transform-origin: top;
+        overflow: hidden;
     }
 
     .plat{
         width: 30%;
+        height: 82%;
+        overflow: hidden;
+    }
+
+    .plat:hover{
+        cursor: pointer;
+    }
+
+    .plat h3, p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0;
+    }
+
+    .plat span{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: -35px 20px 20px 10px;
+        position: initial;
+    }
+
+    @-webkit-keyframes translate-x{
+       0%{
+           transform: translateX(0);
+        }
+
+       100%{
+           transform: translateX(1);
+        }
+    }
+
+    @keyframes translate-x{
+       0%{
+           transform: translateX(0);
+        }
+
+       100%{
+           transform: translateX(1);
+        }
+    }
+
+    .checkplat{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 72px;
+        background: #99E2D0;
+        cursor: pointer;
+        border-radius: 0px 20px 20px 0px;
+        margin: 0px 0px 0px -80px;
+        transform-origin: left;
+        transform: translate(0);
+        transition: 0.5s;
+    }
+
+    .checkplat:hover{
+        cursor: pointer;
+        -webkit-animation: translate-x 0.5s 0s linear both;
+                animation: translate-x 0.5s 0s linear both;
+    }
+
+    .plat:hover .checkplat{
+        margin-right: 10px;
     }
 
     .boxdessert{
@@ -399,10 +675,80 @@ a{
         flex-direction: row;
         justify-content: space-around;
         margin: 20px;
+        -webkit-animation: scale-y 0.5s 2s linear both;
+                animation: scale-y 0.5s 2s linear both;
+        transform-origin: top;
+        overflow: hidden;
     }
 
     .dessert{
         width: 30%;
+        height: 82%;
+        overflow: hidden;
+    }
+
+    .dessert:hover{
+        cursor: pointer;
+    }
+
+    .dessert h3, p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0;
+    }
+
+    .dessert span{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: -35px 20px 20px 10px;
+        position: initial;
+    }
+
+    @-webkit-keyframes translate-x{
+       0%{
+           transform: translateX(0);
+        }
+
+       100%{
+           transform: translateX(1);
+        }
+    }
+
+    @keyframes translate-x{
+       0%{
+           transform: translateX(0);
+        }
+
+       100%{
+           transform: translateX(1);
+        }
+    }
+
+    .checkdessert{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 72px;
+        background: #99E2D0;
+        cursor: pointer;
+        border-radius: 0px 20px 20px 0px;
+        margin: 0px 0px 0px -80px;
+        transform-origin: left;
+        transform: translate(0);
+        transition: 0.5s;
+    }
+
+    .checkdessert.dessert{
+        cursor: pointer;
+        -webkit-animation: translate-x 0.5s 0s linear both;
+                animation: translate-x 0.5s 0s linear both;
+    }
+
+    .dessert:hover .checkplat{
+        margin-right: 10px;
     }
 
     .btn button{

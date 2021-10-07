@@ -169,6 +169,22 @@ article p{
     margin: 5px 0px 0px 10px;
 }
 
+.new{
+    background: #99E2D0;
+    width: 25%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 240px;
+    bottom: 220px;
+}
+
+article h4{
+    color: green;
+}
+
 footer{
     background: #353535;
 }
