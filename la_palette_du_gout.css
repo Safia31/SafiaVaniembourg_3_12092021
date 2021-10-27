@@ -59,9 +59,36 @@ header i{
     font-size: 28px;
 }
 
-.titrerestaurant i{
+.hearts{
     display: flex;
-    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    left: 250px;
+    bottom: 20px;
+}
+
+.fa-heart{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+}
+
+.far.fa-heart{
+    color: black;
+}
+
+.fas.fa-heart{
+    opacity: 0;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .titreentree{
@@ -81,6 +108,33 @@ header i{
     margin: 30px 10px 30px 10px;
 }
 
+.choixentree{
+    -webkit-animation: scale-y 0.5s 1s linear both;
+            animation: scale-y 0.5s 1s linear both;
+        transform-origin: top;
+        overflow: hidden;
+}
+
+@-webkit-keyframes scale-y {
+    0%{
+        transform: scaleY(0);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes scale-y {
+    0%{
+        transform: scaleY(0);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
 .entree{
     display: flex;
     flex-direction: column;
@@ -88,31 +142,13 @@ header i{
     box-sizing: border-box;
     background: #FFFFFF;
     border-radius: 20px;
-    width: 100%;
-    height: 100%;
+    height: 70px;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
-.checkentree{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #99E2D0;
-    width: 60px;
-    height: 45px;
-}
-
-.fa-check-circle{
-    color: white;
-    font-size: 25px;
-}
-
-.entree h3{
-    margin: 10px;
-}
-
-.entree p{
+.entree h3, p{
     margin: 5px 5px 10px 10px;
 }
 
@@ -122,15 +158,22 @@ header i{
     bottom: 20px;
 }
 
-.checkplat{
+.checkentree{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
-    height: 45px;
+    height: 70px;
     background: #99E2D0;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 0px 20px 20px 0px;
+    margin: -62px -60px 0px auto;
+}
+
+.fa-check-circle{
+    color: white;
+    font-size: 25px;
 }
 
 .titreplat{
@@ -150,38 +193,45 @@ header i{
     margin: 30px 10px 30px 10px;
 }
 
+.choixplat{
+    -webkit-animation: scale-y 0.5s 1.5s linear both;
+            animation: scale-y 0.5s 1.5s linear both;
+        transform-origin: top;
+        overflow: hidden;
+}
+
 .plat{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    box-sizing: border-box;
     background: #FFFFFF;
     border-radius: 20px;
-    width: 100%;
-    height: 100%;
+    height: 70px;
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.plat h3{
-    margin: 10px;
-}
-
-.plat p{
+.plat h3, p{
     margin: 5px 5px 10px 10px;
 }
 
 .plat span{
     position: absolute;
     right: 20px;
-    bottom: 60px;
+    bottom: 20px;
 }
 
 .checkplat{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 65px;
+    width: 60px;
+    height: 70px;
     background: #99E2D0;
+    border-radius: 0px 20px 20px 0px;
+    margin: -62px -60px 0px auto;
 }
 
 .titredessert{
@@ -201,43 +251,45 @@ header i{
     margin: 30px 10px 30px 10px;
 }
 
+.choixdessert{
+    -webkit-animation: scale-y 0.5s 1s linear both;
+            animation: scale-y 0.5s 1s linear both;
+        transform-origin: top;
+        overflow: hidden;
+}
+
 .dessert{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    box-sizing: border-box;
     background: #FFFFFF;
     border-radius: 20px;
-    width: 100%;
-    height: 100%;
+    height: 70px;
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.dessert h3{
-    margin: 10px;
-}
-
-.dessert p{
+.dessert h3, p{
     margin: 5px 5px 10px 10px;
 }
 
 .dessert span{
     position: absolute;
     right: 20px;
-    bottom: 60px;
+    bottom: 20px;
 }
 
 .checkdessert{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 65px;
+    width: 60px;
+    height: 70px;
     background: #99E2D0;
-}
-
-.fa-check-circle{
-    color: white;
-    font-size: 25px;
+    border-radius: 0px 20px 20px 0px;
+    margin: -62px -60px 0px auto;
 }
 
 .btn{
@@ -314,6 +366,61 @@ a{
         margin: auto;
         max-width: initial;
     }
+
+    .loader{
+        background-color: white;
+        animation: loader 3s linear both;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    @keyframes loader {
+        0%{
+            opacity: 1;
+        }
+
+        100%{
+            opacity: 0;
+        }
+        
+    }
+
+    .spinner{
+        border-right: 10px solid black;
+        border-top: 10px solid #9356DC;
+        border-left: 10px solid #99E2D0;
+        border-bottom: 10px solid #FF79DA;
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        -webkit-animation: spin 3s linear both;
+                animation: spin 3s linear both;
+        position: fixed;
+    }
+
+    @-webkit-keyframes spin {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+            opacity: 0;
+        }
+    }
      
     header i{
         left: 70px;
@@ -347,44 +454,32 @@ a{
         font-size: 40px;
     }
 
-    .coeur{
-        width: 30px;
-        height: 25px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border: 0 solid transparent;
-        background:linear-gradient(#FF79DC, #9356DC);
+    .fa-heart{
+        transition: 0.25s;
+        font-size: 25px;
     }
 
-    .coeur::before{
-        opacity: 0;
-        transition: 0.5s;
-        content: "";
+    .hearts{
+        left: 0;
+        bottom: 0;
     }
 
-    .coeur:hover::before{
+    .fas.fa-heart:hover{
         opacity: 1;
     }
 
-    .coeur:hover .far.fa-heart{
-        opacity: 0;
-    }
-
-    .far.fa-heart, .fas.fa-heart{
-        position: absolute;
-        transition-duration: 0.25s;
-        background-color: #F2F2F2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        mix-blend-mode: lighten;
-        width: 100%;
-        height: 100%;
-    }
+    
 /* Animation coeur */
+
+    @-webkit-keyframes opacity{
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
 
     @keyframes opacity{
         0%{
@@ -458,7 +553,6 @@ a{
 
     .entree:hover{
         cursor: pointer;
-
     }
 
     .entree h3, p{
@@ -473,26 +567,29 @@ a{
         align-items: flex-end;
         margin: -35px 20px 20px 10px;
         position: initial;
+        transform: translate(0);
+        transition: 0.5s;
+        transform-origin: left;
     }
 
     @-webkit-keyframes translate-x{
        0%{
            transform: translateX(0);
-       }
+        }
 
        100%{
-           transform: translateX(1);
-       }
+           transform: translateX(1%);
+        }
     }
 
     @keyframes translate-x{
        0%{
            transform: translateX(0);
-       }
+        }
 
        100%{
-           transform: translateX(1);
-       }
+           transform: translateX(1%);
+        }
     }
 
     .checkentree{
@@ -520,6 +617,16 @@ a{
         margin-right: 0px;
     }
 
+    .entree:hover h3, p{
+        width: 60%;
+    }
+
+    .entree:hover span{
+        margin-right: 70px;
+        -webkit-animation: translate-x 0.5s 0s linear both;
+                animation: translate-x 0.5s 0s linear both;
+    }
+
 /* Animation menu */
 
     @-webkit-keyframes translate-x{
@@ -530,17 +637,7 @@ a{
         100%{
             transform: translateX(1);
         }
-     }
- 
-     @keyframes translate-x{
-        0%{
-            transform: translateX(0);
-        }
- 
-        100%{
-            transform: translateX(1);
-        }
-     }
+    }
 
     .fa-check-circle{
         color: white;
@@ -593,7 +690,6 @@ a{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-bottom: 0;
     }
 
     .plat span{
@@ -602,26 +698,9 @@ a{
         align-items: flex-end;
         margin: -35px 20px 20px 10px;
         position: initial;
-    }
-
-    @-webkit-keyframes translate-x{
-       0%{
-           transform: translateX(0);
-        }
-
-       100%{
-           transform: translateX(1);
-        }
-    }
-
-    @keyframes translate-x{
-       0%{
-           transform: translateX(0);
-        }
-
-       100%{
-           transform: translateX(1);
-        }
+        transform: translate(0);
+        transition: 0.5s;
+        transform-origin: left;
     }
 
     .checkplat{
@@ -629,11 +708,11 @@ a{
         justify-content: center;
         align-items: center;
         width: 60px;
-        height: 72px;
+        height: 70px;
         background: #99E2D0;
         cursor: pointer;
         border-radius: 0px 20px 20px 0px;
-        margin: 0px 0px 0px -80px;
+        margin: -81px -60px 0px auto;
         transform-origin: left;
         transform: translate(0);
         transition: 0.5s;
@@ -645,8 +724,18 @@ a{
                 animation: translate-x 0.5s 0s linear both;
     }
 
+    .plat:hover h3, p{
+        width: 60%;
+    }
+
+    .plat:hover span{
+        margin-right: 70px;
+        -webkit-animation: translate-x 0.5s 0s linear both;
+                animation: translate-x 0.5s 0s linear both;
+    }
+
     .plat:hover .checkplat{
-        margin-right: 10px;
+        margin-right: 0px;
     }
 
     .boxdessert{
@@ -695,7 +784,6 @@ a{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-bottom: 0;
     }
 
     .dessert span{
@@ -704,26 +792,9 @@ a{
         align-items: flex-end;
         margin: -35px 20px 20px 10px;
         position: initial;
-    }
-
-    @-webkit-keyframes translate-x{
-       0%{
-           transform: translateX(0);
-        }
-
-       100%{
-           transform: translateX(1);
-        }
-    }
-
-    @keyframes translate-x{
-       0%{
-           transform: translateX(0);
-        }
-
-       100%{
-           transform: translateX(1);
-        }
+        transform: translate(0);
+        transition: 0.5s;
+        transform-origin: left;
     }
 
     .checkdessert{
@@ -731,11 +802,11 @@ a{
         justify-content: center;
         align-items: center;
         width: 60px;
-        height: 72px;
+        height: 70px;
         background: #99E2D0;
         cursor: pointer;
         border-radius: 0px 20px 20px 0px;
-        margin: 0px 0px 0px -80px;
+        margin: -81px -60px 0px auto;
         transform-origin: left;
         transform: translate(0);
         transition: 0.5s;
@@ -747,8 +818,18 @@ a{
                 animation: translate-x 0.5s 0s linear both;
     }
 
-    .dessert:hover .checkplat{
-        margin-right: 10px;
+    .dessert:hover h3, p{
+        width: 60%;
+    }
+
+    .dessert:hover span{
+        margin-right: 70px;
+        -webkit-animation: translate-x 0.5s 0s linear both;
+                animation: translate-x 0.5s 0s linear both;
+    }
+
+    .dessert:hover .checkdessert{
+        margin-right: 0px;
     }
 
     .btn button{
@@ -793,6 +874,11 @@ a{
         margin: 25px;
     }
 
+    .hearts{
+        left: 5px;
+        bottom: 2px;
+    }
+
     .titreentree{
         border-bottom: initial;
         width: initial;
@@ -808,6 +894,30 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        -webkit-animation: scale-y 0.5s 1s linear both;
+                animation: scale-y 0.5s 1s linear both;
+            transform-origin: top;
+            overflow: hidden;
+    }
+    
+    @-webkit-keyframes scale-y {
+        0%{
+            transform: scaleY(0);
+        }
+    
+        100%{
+            transform: scaleY(1);
+        }
+    }
+    
+    @keyframes scale-y {
+        0%{
+            transform: scaleY(0);
+        }
+    
+        100%{
+            transform: scaleY(1);
+        }
     }
 
     .entree{
@@ -829,6 +939,10 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        -webkit-animation: scale-y 0.5s 1.5s linear both;
+                animation: scale-y 0.5s 1.5s linear both;
+            transform-origin: top;
+            overflow: hidden;
     }
 
     .plat{
@@ -850,6 +964,10 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        -webkit-animation: scale-y 0.5s 2s linear both;
+                animation: scale-y 0.5s 2s linear both;
+            transform-origin: top;
+            overflow: hidden;
     }
 
     .dessert{
