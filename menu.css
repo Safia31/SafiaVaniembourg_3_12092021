@@ -11,6 +11,16 @@ body{
     max-width: 400px;
 }
 
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
 header{
     padding: 5px;
 }
@@ -66,8 +76,8 @@ header i{
     width: 30px;
     height: 25px;
     position: relative;
-    left: 250px;
-    bottom: 20px;
+    left: 2px;
+    bottom: 2px;
 }
 
 .fa-heart{
@@ -77,6 +87,7 @@ header i{
     align-items: center;
     width: 30px;
     height: 25px;
+    font-size: 20px;
 }
 
 .far.fa-heart{
@@ -139,6 +150,7 @@ header i{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    margin-left: 10px;
     box-sizing: border-box;
     background: #FFFFFF;
     border-radius: 20px;
@@ -399,7 +411,6 @@ a{
         height: 75px;
         -webkit-animation: spin 3s linear both;
                 animation: spin 3s linear both;
-        position: fixed;
     }
 
     @-webkit-keyframes spin {
@@ -454,11 +465,6 @@ a{
         font-size: 40px;
     }
 
-    .fa-heart{
-        transition: 0.25s;
-        font-size: 25px;
-    }
-
     .hearts{
         left: 0;
         bottom: 0;
@@ -466,6 +472,8 @@ a{
 
     .fas.fa-heart:hover{
         opacity: 1;
+        transition: 0.25s;
+        font-size: 22px;
     }
 
     
@@ -548,7 +556,6 @@ a{
     .entree{
         width: 30%;
         height: 82%;
-        overflow: hidden;
     }
 
     .entree:hover{
