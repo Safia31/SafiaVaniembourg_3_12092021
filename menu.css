@@ -11,6 +11,52 @@ body{
     max-width: 400px;
 }
 
+.loader{
+    background-color: white;
+    animation: loader 3s linear both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes loader {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+.spinner{
+    border-right: 10px solid black;
+    border-top: 10px solid #9356DC;
+    border-left: 10px solid #99E2D0;
+    border-bottom: 10px solid #FF79DA;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    -webkit-animation: spin 3s linear both;
+            animation: spin 3s linear both;
+    position: absolute;
+    top: 150px;
+}
+
+@-webkit-keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
 @keyframes spin {
     0%{
         transform: rotate(0deg);
@@ -102,18 +148,18 @@ header i{
     -webkit-text-fill-color: transparent;
 }
 
-.titreentree{
+.titre{
     margin: 10px 10px 30px 20px;
     border-bottom: 3px solid #99E2D0;
     width: 17%;
 }
 
-.titreentree h2{
+.titre h2{
     margin: 0;
     font-size: 18px;
 }
 
-.boxentree{
+.box{
     display: flex;
     flex-direction: column;
     margin: 30px 10px 30px 10px;
@@ -122,6 +168,20 @@ header i{
 .choixentree{
     -webkit-animation: scale-y 0.5s 1s linear both;
             animation: scale-y 0.5s 1s linear both;
+        transform-origin: top;
+        overflow: hidden;
+}
+
+.choixplat{
+    -webkit-animation: scale-y 0.5s 1.5s linear both;
+            animation: scale-y 0.5s 1.5s linear both;
+        transform-origin: top;
+        overflow: hidden;
+}
+
+.choixdessert{
+    -webkit-animation: scale-y 0.5s 2s linear both;
+            animation: scale-y 0.5s 2s linear both;
         transform-origin: top;
         overflow: hidden;
 }
@@ -146,11 +206,11 @@ header i{
     }
 }
 
-.entree{
+.repas{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
-    margin-left: 10px;
+    margin-left: 5px;
     box-sizing: border-box;
     background: #FFFFFF;
     border-radius: 20px;
@@ -160,17 +220,21 @@ header i{
     overflow: hidden;
 }
 
-.entree h3, p{
+.repas h3{
     margin: 5px 5px 10px 10px;
 }
 
-.entree span{
+.repas p{
+    margin: 5px 5px 10px 10px;
+}
+
+.repas span{
     position: absolute;
     right: 20px;
     bottom: 20px;
 }
 
-.checkentree{
+.check{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,7 +252,7 @@ header i{
     font-size: 25px;
 }
 
-.titreplat{
+/*.titreplat{
     margin: 10px 10px 30px 20px;
     border-bottom: 3px solid #99E2D0;
     width: 17%;
@@ -264,8 +328,8 @@ header i{
 }
 
 .choixdessert{
-    -webkit-animation: scale-y 0.5s 1s linear both;
-            animation: scale-y 0.5s 1s linear both;
+    -webkit-animation: scale-y 0.5s 2s linear both;
+            animation: scale-y 0.5s 2s linear both;
         transform-origin: top;
         overflow: hidden;
 }
@@ -302,7 +366,7 @@ header i{
     background: #99E2D0;
     border-radius: 0px 20px 20px 0px;
     margin: -62px -60px 0px auto;
-}
+}*/
 
 .btn{
     display: flex;
@@ -323,6 +387,8 @@ button{
     color: white;
     font-size: 16px;
     padding: 0;
+    transition: 0.25s;
+    opacity: 0.8;
 }
 
 footer{
@@ -379,7 +445,7 @@ a{
         max-width: initial;
     }
 
-    .loader{
+    /*.loader{
         background-color: white;
         animation: loader 3s linear both;
         display: flex;
@@ -431,7 +497,7 @@ a{
             transform: rotate(360deg);
             opacity: 0;
         }
-    }
+    }*/
      
     header i{
         left: 70px;
@@ -470,10 +536,14 @@ a{
         bottom: 0;
     }
 
+    .fa-heart{
+        font-size: 25px;
+    }
+
     .fas.fa-heart:hover{
         opacity: 1;
         transition: 0.25s;
-        font-size: 22px;
+        font-size: 27px;
     }
 
     
@@ -499,19 +569,19 @@ a{
         }
     }
 
-    .boxentree{
+    .box{
         box-sizing: border-box;
         border-radius: 30px 30px 30px 30px;
         border: 2px solid #99E2D0;
     }
 
-    .titreentree{
+    .titre{
         margin: 30px;
         width: initial;
         border-bottom: none;
     }
 
-    .titreentree h2{
+    .titre h2{
         display: flex;
         justify-content: center;
         margin: 0;
@@ -527,6 +597,28 @@ a{
         margin: 20px;
         -webkit-animation: scale-y 0.5s 1s linear both;
                 animation: scale-y 0.5s 1s linear both;
+        transform-origin: top;
+        overflow: hidden;
+    }
+
+    .choixplat{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px;
+        -webkit-animation: scale-y 0.5s 1.5s linear both;
+                animation: scale-y 0.5s 1.5s linear both;
+        transform-origin: top;
+        overflow: hidden;
+    }
+
+    .choixdessert{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px;
+        -webkit-animation: scale-y 0.5s 2s linear both;
+                animation: scale-y 0.5s 2s linear both;
         transform-origin: top;
         overflow: hidden;
     }
@@ -553,26 +645,31 @@ a{
         }
     }
 
-    .entree{
+    .repas{
         width: 30%;
-        height: 82%;
     }
 
-    .entree:hover{
+    .repas:hover{
         cursor: pointer;
     }
 
-    .entree h3, p{
+    .repas h3{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    .entree span{
+    .repas p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .repas span{
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        margin: -35px 20px 20px 10px;
+        margin: -45px 20px 20px 10px;
         position: initial;
         transform: translate(0);
         transition: 0.5s;
@@ -599,36 +696,40 @@ a{
         }
     }
 
-    .checkentree{
+    .check{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 60px;
-        height: 70px;
+        height: 73px;
         background: #99E2D0;
         cursor: pointer;
         border-radius: 0px 20px 20px 0px;
-        margin: -81px -60px 0px auto;
+        margin: -65px -60px -2px auto;
         transform-origin: left;
         transform: translate(0);
         transition: 0.5s;
     }
 
-    .checkentree:hover{
+    .check:hover{
         cursor: pointer;
         -webkit-animation: translate-x 0.5s 0s linear both;
                 animation: translate-x 0.5s 0s linear both;
     }
 
-    .entree:hover .checkentree{
+    .repas:hover .check{
         margin-right: 0px;
     }
 
-    .entree:hover h3, p{
+    .repas:hover h3{
         width: 60%;
     }
 
-    .entree:hover span{
+    .repas:hover p{
+        width: 70%;
+    }
+
+    .repas:hover span{
         margin-right: 70px;
         -webkit-animation: translate-x 0.5s 0s linear both;
                 animation: translate-x 0.5s 0s linear both;
@@ -651,7 +752,7 @@ a{
         font-size: 25px;
     }
 
-    .boxplat{
+    /*.boxplat{
         box-sizing: border-box;
         border-radius: 30px 30px 30px 30px;
         border: 2px solid #99E2D0;
@@ -837,10 +938,15 @@ a{
 
     .dessert:hover .checkdessert{
         margin-right: 0px;
-    }
+    }*/
 
     .btn button{
         margin: 40px;
+    }
+
+    button:hover{
+        cursor: pointer;
+        opacity: 1;
     }
 
     .footerlogo h2{
@@ -886,12 +992,12 @@ a{
         bottom: 2px;
     }
 
-    .titreentree{
+    .titre{
         border-bottom: initial;
         width: initial;
     }
 
-    .titreentree h2{
+    .titre h2{
         font-family: "Shrikhand";
         font-size: 25px;
         color: #99E2D0;
@@ -903,6 +1009,26 @@ a{
         align-items: center;
         -webkit-animation: scale-y 0.5s 1s linear both;
                 animation: scale-y 0.5s 1s linear both;
+            transform-origin: top;
+            overflow: hidden;
+    }
+
+    .choixplat{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        -webkit-animation: scale-y 0.5s 1.5s linear both;
+                animation: scale-y 0.5s 1.5s linear both;
+            transform-origin: top;
+            overflow: hidden;
+    }
+
+    .choixdessert{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        -webkit-animation: scale-y 0.5s 2s linear both;
+                animation: scale-y 0.5s 2s linear both;
             transform-origin: top;
             overflow: hidden;
     }
@@ -927,32 +1053,11 @@ a{
         }
     }
 
-    .entree{
+    .repas{
         width: 70%;
     }
 
-    .titreplat{
-        border-bottom: initial;
-        width: initial;
-    }
-
-    .titreplat h2{
-        font-family: "Shrikhand";
-        font-size: 25px;
-        color: #99E2D0;
-    }
-
-    .choixplat{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        -webkit-animation: scale-y 0.5s 1.5s linear both;
-                animation: scale-y 0.5s 1.5s linear both;
-            transform-origin: top;
-            overflow: hidden;
-    }
-
-    .plat{
+    /*.plat{
         width: 70%;
     }
 
@@ -967,19 +1072,9 @@ a{
         color: #99E2D0;
     }
 
-    .choixdessert{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        -webkit-animation: scale-y 0.5s 2s linear both;
-                animation: scale-y 0.5s 2s linear both;
-            transform-origin: top;
-            overflow: hidden;
-    }
-
     .dessert{
         width: 70%;
-    }
+    }*/
 
     .footerlogo h2{
         font-size: 30px;

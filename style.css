@@ -123,6 +123,8 @@ button{
     color: white;
     font-size: 16px;
     padding: 0;
+    transition: 0.25s;
+    opacity: 0.8;
 }
 
 .une{
@@ -178,12 +180,8 @@ span{
     width: 178px;
 }
 
-.fa-list-ul, .fa-mobile-alt{
+.fa-list-ul, .fa-mobile-alt, .fa-store{
     color: grey;
-}
-
-.fa-store{
-    color: #9356DC;
 }
 
 .deux{
@@ -368,6 +366,11 @@ h5{
         margin: 0;
     }
 
+    button:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+
     .une{
         display: flex;
         flex-direction: column;
@@ -393,6 +396,21 @@ h5{
 
     .choice i{
         color: grey;
+    }
+
+    .fa-mobile-alt:hover{
+        color: #9356DC;
+        cursor: pointer;
+    }
+
+    .fa-list-ul:hover{
+        color: #9356DC;
+        cursor: pointer;
+    }
+
+    .fa-store:hover{
+        color: #9356DC;
+        cursor: pointer;
     }
 
     .restaurant{
@@ -424,6 +442,7 @@ h5{
 
     .card a{
         margin: 20px;
+        z-index: 1;
     }
 
     article{
