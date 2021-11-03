@@ -11,62 +11,6 @@ body{
     max-width: 400px;
 }
 
-.loader{
-    background-color: white;
-    animation: loader 3s linear both;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes loader {
-    0%{
-        opacity: 1;
-    }
-
-    100%{
-        opacity: 0;
-    }
-    
-}
-
-.spinner{
-    border-right: 10px solid black;
-    border-top: 10px solid #9356DC;
-    border-left: 10px solid #99E2D0;
-    border-bottom: 10px solid #FF79DA;
-    border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    -webkit-animation: spin 3s linear both;
-            animation: spin 3s linear both;
-    position: absolute;
-    top: 150px;
-}
-
-@-webkit-keyframes spin {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-        opacity: 0;
-    }
-}
-
-@keyframes spin {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-        opacity: 0;
-    }
-}
-
 header{
     padding: 5px;
 }
@@ -252,122 +196,6 @@ header i{
     font-size: 25px;
 }
 
-/*.titreplat{
-    margin: 10px 10px 30px 20px;
-    border-bottom: 3px solid #99E2D0;
-    width: 17%;
-}
-
-.titreplat h2{
-    margin: 0;
-    font-size: 18px;
-}
-
-.boxplat{
-    display: flex;
-    flex-direction: column;
-    margin: 30px 10px 30px 10px;
-}
-
-.choixplat{
-    -webkit-animation: scale-y 0.5s 1.5s linear both;
-            animation: scale-y 0.5s 1.5s linear both;
-        transform-origin: top;
-        overflow: hidden;
-}
-
-.plat{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border-radius: 20px;
-    height: 70px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.plat h3, p{
-    margin: 5px 5px 10px 10px;
-}
-
-.plat span{
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-
-.checkplat{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 70px;
-    background: #99E2D0;
-    border-radius: 0px 20px 20px 0px;
-    margin: -62px -60px 0px auto;
-}
-
-.titredessert{
-    margin: 10px 10px 30px 20px;
-    border-bottom: 3px solid #99E2D0;
-    width: 17%;
-}
-
-.titredessert h2{
-    margin: 0;
-    font-size: 18px;
-}
-
-.boxdessert{
-    display: flex;
-    flex-direction: column;
-    margin: 30px 10px 30px 10px;
-}
-
-.choixdessert{
-    -webkit-animation: scale-y 0.5s 2s linear both;
-            animation: scale-y 0.5s 2s linear both;
-        transform-origin: top;
-        overflow: hidden;
-}
-
-.dessert{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border-radius: 20px;
-    height: 70px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.dessert h3, p{
-    margin: 5px 5px 10px 10px;
-}
-
-.dessert span{
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-
-.checkdessert{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 70px;
-    background: #99E2D0;
-    border-radius: 0px 20px 20px 0px;
-    margin: -62px -60px 0px auto;
-}*/
-
 .btn{
     display: flex;
     justify-content: center;
@@ -444,60 +272,6 @@ a{
         margin: auto;
         max-width: initial;
     }
-
-    /*.loader{
-        background-color: white;
-        animation: loader 3s linear both;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
-
-    @keyframes loader {
-        0%{
-            opacity: 1;
-        }
-
-        100%{
-            opacity: 0;
-        }
-        
-    }
-
-    .spinner{
-        border-right: 10px solid black;
-        border-top: 10px solid #9356DC;
-        border-left: 10px solid #99E2D0;
-        border-bottom: 10px solid #FF79DA;
-        border-radius: 50%;
-        width: 75px;
-        height: 75px;
-        -webkit-animation: spin 3s linear both;
-                animation: spin 3s linear both;
-    }
-
-    @-webkit-keyframes spin {
-        0%{
-            transform: rotate(0deg);
-        }
-        100%{
-            transform: rotate(360deg);
-            opacity: 0;
-        }
-    }
-
-    @keyframes spin {
-        0%{
-            transform: rotate(0deg);
-        }
-        100%{
-            transform: rotate(360deg);
-            opacity: 0;
-        }
-    }*/
      
     header i{
         left: 70px;
@@ -623,28 +397,6 @@ a{
         overflow: hidden;
     }
 
-/* Animation defilement */
-
-    @-webkit-keyframes scale-y {
-        0%{
-            transform: scaleY(0);
-        }
-
-        100%{
-            transform: scaleY(1);
-        }
-    }
-
-    @keyframes scale-y {
-        0%{
-            transform: scaleY(0);
-        }
-
-        100%{
-            transform: scaleY(1);
-        }
-    }
-
     .repas{
         width: 30%;
     }
@@ -735,210 +487,10 @@ a{
                 animation: translate-x 0.5s 0s linear both;
     }
 
-/* Animation menu */
-
-    @-webkit-keyframes translate-x{
-        0%{
-            transform: translateX(0);
-        }
- 
-        100%{
-            transform: translateX(1);
-        }
-    }
-
     .fa-check-circle{
         color: white;
         font-size: 25px;
     }
-
-    /*.boxplat{
-        box-sizing: border-box;
-        border-radius: 30px 30px 30px 30px;
-        border: 2px solid #99E2D0;
-    }
-
-    .titreplat{
-        margin: 30px;
-        width: initial;
-        border-bottom: none;
-    }
-
-    .titreplat h2{
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        font-size: 35px;
-        font-family: "Shrikhand";
-        color: #99E2D0;
-    }
-
-    .choixplat{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 20px;
-        -webkit-animation: scale-y 0.5s 1.5s linear both;
-                animation: scale-y 0.5s 1.5s linear both;
-        transform-origin: top;
-        overflow: hidden;
-    }
-
-    .plat{
-        width: 30%;
-        height: 82%;
-        overflow: hidden;
-    }
-
-    .plat:hover{
-        cursor: pointer;
-    }
-
-    .plat h3, p{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .plat span{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin: -35px 20px 20px 10px;
-        position: initial;
-        transform: translate(0);
-        transition: 0.5s;
-        transform-origin: left;
-    }
-
-    .checkplat{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 70px;
-        background: #99E2D0;
-        cursor: pointer;
-        border-radius: 0px 20px 20px 0px;
-        margin: -81px -60px 0px auto;
-        transform-origin: left;
-        transform: translate(0);
-        transition: 0.5s;
-    }
-
-    .checkplat:hover{
-        cursor: pointer;
-        -webkit-animation: translate-x 0.5s 0s linear both;
-                animation: translate-x 0.5s 0s linear both;
-    }
-
-    .plat:hover h3, p{
-        width: 60%;
-    }
-
-    .plat:hover span{
-        margin-right: 70px;
-        -webkit-animation: translate-x 0.5s 0s linear both;
-                animation: translate-x 0.5s 0s linear both;
-    }
-
-    .plat:hover .checkplat{
-        margin-right: 0px;
-    }
-
-    .boxdessert{
-        box-sizing: border-box;
-        border-radius: 30px 30px 30px 30px;
-        border: 2px solid #99E2D0;
-    }
-
-    .titredessert{
-        margin: 30px;
-        width: initial;
-        border-bottom: none;
-    }
-
-    .titredessert h2{
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        font-size: 35px;
-        font-family: "Shrikhand";
-        color: #99E2D0;
-    }
-
-    .choixdessert{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 20px;
-        -webkit-animation: scale-y 0.5s 2s linear both;
-                animation: scale-y 0.5s 2s linear both;
-        transform-origin: top;
-        overflow: hidden;
-    }
-
-    .dessert{
-        width: 30%;
-        height: 82%;
-        overflow: hidden;
-    }
-
-    .dessert:hover{
-        cursor: pointer;
-    }
-
-    .dessert h3, p{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .dessert span{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin: -35px 20px 20px 10px;
-        position: initial;
-        transform: translate(0);
-        transition: 0.5s;
-        transform-origin: left;
-    }
-
-    .checkdessert{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 70px;
-        background: #99E2D0;
-        cursor: pointer;
-        border-radius: 0px 20px 20px 0px;
-        margin: -81px -60px 0px auto;
-        transform-origin: left;
-        transform: translate(0);
-        transition: 0.5s;
-    }
-
-    .checkdessert.dessert{
-        cursor: pointer;
-        -webkit-animation: translate-x 0.5s 0s linear both;
-                animation: translate-x 0.5s 0s linear both;
-    }
-
-    .dessert:hover h3, p{
-        width: 60%;
-    }
-
-    .dessert:hover span{
-        margin-right: 70px;
-        -webkit-animation: translate-x 0.5s 0s linear both;
-                animation: translate-x 0.5s 0s linear both;
-    }
-
-    .dessert:hover .checkdessert{
-        margin-right: 0px;
-    }*/
 
     .btn button{
         margin: 40px;
@@ -978,6 +530,11 @@ a{
         width: 40%;
     }
 
+    .background img{
+        height: 250px;
+        position: relative;
+    }
+
     .container{
         bottom: 40px;
     }
@@ -995,12 +552,20 @@ a{
     .titre{
         border-bottom: initial;
         width: initial;
+        display: flex;
+        justify-content: center;
     }
 
     .titre h2{
         font-family: "Shrikhand";
         font-size: 25px;
         color: #99E2D0;
+    }
+
+    .box{
+        box-sizing: border-box;
+        border-radius: 30px 30px 30px 30px;
+        border: 2px solid #99E2D0;
     }
 
     .choixentree{
@@ -1032,49 +597,10 @@ a{
             transform-origin: top;
             overflow: hidden;
     }
-    
-    @-webkit-keyframes scale-y {
-        0%{
-            transform: scaleY(0);
-        }
-    
-        100%{
-            transform: scaleY(1);
-        }
-    }
-    
-    @keyframes scale-y {
-        0%{
-            transform: scaleY(0);
-        }
-    
-        100%{
-            transform: scaleY(1);
-        }
-    }
 
     .repas{
         width: 70%;
     }
-
-    /*.plat{
-        width: 70%;
-    }
-
-    .titredessert{
-        border-bottom: initial;
-        width: initial;
-    }
-
-    .titredessert h2{
-        font-family: "Shrikhand";
-        font-size: 25px;
-        color: #99E2D0;
-    }
-
-    .dessert{
-        width: 70%;
-    }*/
 
     .footerlogo h2{
         font-size: 30px;
