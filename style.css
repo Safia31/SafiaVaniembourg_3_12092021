@@ -94,14 +94,27 @@ body{
     margin-bottom: 10px;
 }
 
+form{
+    height: 40px;
+}
+
 .search i{
     display: flex;
     align-items: center;
-    margin-right: 5px;
+    margin-top: 10px;
+    margin-left: 60px;
+    font-size: 20px;
 }
 
-.search p{
-    margin: 10px;
+input{
+    border: none;
+    background: #F2F2F2;
+    display: flex;
+    padding: 5px 10px;
+    margin: -25px -60px -10px 80px;
+    font-size: 20px;
+    width: 70%;
+    font-weight: bold;
 }
 
 .title{
@@ -382,12 +395,20 @@ a{
         width: 400px;
     }
 
-    .search i{
-        font-size: 30px;
+    form{
+        height: 60px;
     }
 
-    .search p{
-        font-size: 25px;
+    .search i{
+        font-size: 30px;
+        margin-left: 40px;
+        margin-top: 15px;
+    }
+
+    input{
+        font-size: 30px;
+        padding: 0;
+        margin-top: -33px;
     }
 
     .title h1{
@@ -514,10 +535,13 @@ a{
 
     .search i{
         font-size: 25px;
+        margin-left: 50px;
+        margin-top: 5px;
     }
 
-    .search p{
-        font-size: 25px;
+    input{
+        padding: 0;
+        font-size: 22px;
     }
 
     .title h1{
