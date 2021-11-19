@@ -92,6 +92,32 @@ header i{
     -webkit-text-fill-color: transparent;
 }
 
+.fas.fa-heart:hover{
+    opacity: 1;
+    transition: 0.25s;
+    font-size: 27px;
+}
+
+@-webkit-keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 .titre{
     margin: 10px 10px 30px 20px;
     border-bottom: 3px solid #99E2D0;
@@ -109,25 +135,36 @@ header i{
     margin: 30px 10px 30px 10px;
 }
 
-.choixentree{
-    -webkit-animation: scale-y 0.5s 1s linear both;
-            animation: scale-y 0.5s 1s linear both;
-        transform-origin: top;
-        overflow: hidden;
+.one{
+    animation-delay: 0.1s;
+        -webkit-animation: scale-y 0.5s 1s linear both;
+                animation: scale-y 0.5s 1s linear both;
+            transform-origin: top;
+            overflow: hidden;
 }
 
-.choixplat{
+.two{
+    animation-delay: 0.2s;
     -webkit-animation: scale-y 0.5s 1.5s linear both;
             animation: scale-y 0.5s 1.5s linear both;
-        transform-origin: top;
-        overflow: hidden;
+            transform-origin: top;
+            overflow: hidden;
 }
 
-.choixdessert{
+.three{
+    animation-delay: 0.3s;
     -webkit-animation: scale-y 0.5s 2s linear both;
             animation: scale-y 0.5s 2s linear both;
-        transform-origin: top;
-        overflow: hidden;
+            transform-origin: top;
+            overflow: hidden;
+}
+
+.four{
+    animation-delay: 0.3s;
+    -webkit-animation: scale-y 0.5s 2s linear both;
+            animation: scale-y 0.5s 2s linear both;
+            transform-origin: top;
+            overflow: hidden;
 }
 
 @-webkit-keyframes scale-y {
@@ -155,7 +192,9 @@ header i{
     flex-direction: column;
     margin-bottom: 15px;
     margin-left: 5px;
+    margin-right: 5px;
     box-sizing: border-box;
+    box-shadow: 0px 5px 5px grey;
     background: #FFFFFF;
     border-radius: 20px;
     height: 70px;
@@ -164,18 +203,40 @@ header i{
     overflow: hidden;
 }
 
-.repas h3{
-    margin: 5px 5px 10px 10px;
-}
-
-.repas p{
-    margin: 5px 5px 10px 10px;
+.repas h3, .repas p{
+    margin: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
 }
 
 .repas span{
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 10px;
+    bottom: 12px;
+    transform: translate(0);
+    transition: 0.5s;
+    transform-origin: left;
+    font-weight: bold;
+}
+
+.repas:hover .check{
+    margin-right: 0px;
+}
+
+.repas:hover h3{
+    width: 60%;
+}
+
+.repas:hover p{
+    width: 65%;
+}
+
+.repas:hover span{
+    margin-right: 70px;
+    -webkit-animation: translate-x 0.5s 0s linear both;
+            animation: translate-x 0.5s 0s linear both;
 }
 
 .check{
@@ -189,11 +250,56 @@ header i{
     cursor: pointer;
     border-radius: 0px 20px 20px 0px;
     margin: -62px -60px 0px auto;
+    transform-origin: left;
+    transform: translate(0);
+    transition: 0.5s;
 }
 
 .fa-check-circle{
     color: white;
     font-size: 25px;
+    transform: rotate(180deg);
+}
+
+.repas:hover .fa-check-circle{
+    transform: rotate(0);
+    transition: 0.5s;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+}
+
+.check:hover{
+    cursor: pointer;
+    -webkit-animation: translate-x 0.5s 0s linear both;
+            animation: translate-x 0.5s 0s linear both;
+}
+
+@-webkit-keyframes translate-x{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(1%);
+    }
+}
+
+ @keyframes translate-x{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(1%);
+    }
 }
 
 .btn{
@@ -217,6 +323,12 @@ button{
     padding: 0;
     transition: 0.25s;
     opacity: 1;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    box-shadow: 0px 5px 5px 0px black;
 }
 
 footer{
@@ -253,17 +365,16 @@ footer a{
     margin-left: 10px;
 }
 
-h5{
+.list p{
     margin: 5px 0px 5px 0px;
     font-size: 16px;  
-
 }
 
 a{
     text-decoration: none;
 }
 
-/* Responsive Desktop */
+/* VERSION DESKTOP */
 
 @media only screen and (min-width: 1024px)
 {
@@ -314,35 +425,6 @@ a{
         font-size: 25px;
     }
 
-    .fas.fa-heart:hover{
-        opacity: 1;
-        transition: 0.25s;
-        font-size: 27px;
-    }
-
-    
-/* Animation coeur */
-
-    @-webkit-keyframes opacity{
-        0%{
-            opacity: 0;
-        }
-
-        100%{
-            opacity: 1;
-        }
-    }
-
-    @keyframes opacity{
-        0%{
-            opacity: 0;
-        }
-
-        100%{
-            opacity: 1;
-        }
-    }
-
     .box{
         box-sizing: border-box;
         border-radius: 30px 30px 30px 30px;
@@ -364,127 +446,29 @@ a{
         color: #99E2D0;
     }
 
-    .choixentree{
+    .choixentree, .choixplat, .choixdessert{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin: 20px;
-        -webkit-animation: scale-y 0.5s 1s linear both;
-                animation: scale-y 0.5s 1s linear both;
-        transform-origin: top;
-        overflow: hidden;
+        margin: 20px 5px;
     }
 
-    .choixplat{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 20px;
-        -webkit-animation: scale-y 0.5s 1.5s linear both;
-                animation: scale-y 0.5s 1.5s linear both;
-        transform-origin: top;
-        overflow: hidden;
-    }
-
-    .choixdessert{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 20px;
-        -webkit-animation: scale-y 0.5s 2s linear both;
-                animation: scale-y 0.5s 2s linear both;
-        transform-origin: top;
-        overflow: hidden;
+    .one, .two, .three, .four{
+        width: 100%;
     }
 
     .repas{
-        width: 30%;
-    }
-
-    .repas:hover{
-        cursor: pointer;
-    }
-
-    .repas h3{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .repas p{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        width: 98%;
     }
 
     .repas span{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin: -45px 20px 20px 10px;
-        position: initial;
         transform: translate(0);
         transition: 0.5s;
         transform-origin: left;
-    }
-
-    @-webkit-keyframes translate-x{
-       0%{
-           transform: translateX(0);
-        }
-
-       100%{
-           transform: translateX(1%);
-        }
-    }
-
-    @keyframes translate-x{
-       0%{
-           transform: translateX(0);
-        }
-
-       100%{
-           transform: translateX(1%);
-        }
     }
 
     .check{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 73px;
-        background: #99E2D0;
-        cursor: pointer;
-        border-radius: 0px 20px 20px 0px;
-        margin: -65px -60px -2px auto;
-        transform-origin: left;
-        transform: translate(0);
-        transition: 0.5s;
-    }
-
-    .check:hover{
-        cursor: pointer;
-        -webkit-animation: translate-x 0.5s 0s linear both;
-                animation: translate-x 0.5s 0s linear both;
-    }
-
-    .repas:hover .check{
-        margin-right: 0px;
-    }
-
-    .repas:hover h3{
-        width: 60%;
-    }
-
-    .repas:hover p{
-        width: 70%;
-    }
-
-    .repas:hover span{
-        margin-right: 70px;
-        -webkit-animation: translate-x 0.5s 0s linear both;
-                animation: translate-x 0.5s 0s linear both;
+        margin-bottom: -2px;
     }
 
     .fa-check-circle{
@@ -495,12 +479,6 @@ a{
     .btn button{
         margin: 40px;
     }
-
-    button:hover{
-        cursor: pointer;
-        opacity: 0.8;
-    }
-
     .footerlogo h2{
         font-size: 40px;
     }
@@ -568,7 +546,7 @@ a{
         border: 2px solid #99E2D0;
     }
 
-    .choixentree{
+  /*  .choixentree{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -596,10 +574,23 @@ a{
                 animation: scale-y 0.5s 2s linear both;
             transform-origin: top;
             overflow: hidden;
+    } */
+
+    .choixentree, .choixplat, .choixdessert{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .one, .two, .three, .four{
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .repas{
-        width: 70%;
+        width: 60%;
     }
 
     .footerlogo h2{

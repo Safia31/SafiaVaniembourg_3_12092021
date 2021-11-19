@@ -21,10 +21,12 @@ body{
 @-webkit-keyframes loader {
     0%{
         opacity: 1;
+        z-index: 1;
     }
 
     100%{
         opacity: 0;
+        z-index: -1;
     }
     
 }
@@ -32,10 +34,12 @@ body{
 @keyframes loader {
     0%{
         opacity: 1;
+        z-index: 1;
     }
 
     100%{
         opacity: 0;
+        z-index: -1;
     }
     
 }
@@ -127,6 +131,12 @@ button{
     opacity: 1;
 }
 
+button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px 0px black;
+}
+
 .une{
     margin-bottom: 60px;
 }
@@ -154,6 +164,15 @@ button{
     box-shadow: 0px 5px 5px 0px grey;
 }
 
+.choice .fas:hover{
+    color: #9356DC;
+    cursor: pointer;
+}
+
+.choice:hover{
+    background-color: #F4E8F9;
+}
+
 .choice i{
     position: relative;
     margin-right: 30px;
@@ -178,6 +197,7 @@ span{
 .choice h4{
     margin-right: 20px;
     width: 178px;
+    color: black;
 }
 
 .fa-list-ul, .fa-mobile-alt, .fa-store{
@@ -260,6 +280,30 @@ article h3{
     -webkit-text-fill-color: transparent;
 }
 
+.fas.fa-heart:hover{
+    opacity: 1;
+    transition: 0.25s;
+    font-size: 22px;
+}
+
+@-webkit-keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 article p{
     margin: -20px 0px 0px 10px;
 }
@@ -311,13 +355,13 @@ a{
     text-decoration: none;
 }
 
-h5{
+.list p{
     margin: 5px 0px 5px 0px;
     font-size: 16px;  
 }
 
 
-/*Responsive Desktop*/
+/*VERSION DESKTOP*/
 
 @media only screen and (min-width: 1024px)
 {
@@ -366,11 +410,6 @@ h5{
         margin: 0;
     }
 
-    button:hover{
-        opacity: 0.8;
-        cursor: pointer;
-    }
-
     .une{
         display: flex;
         flex-direction: column;
@@ -396,21 +435,6 @@ h5{
 
     .choice i{
         color: grey;
-    }
-
-    .fa-mobile-alt:hover{
-        color: #9356DC;
-        cursor: pointer;
-    }
-
-    .fa-list-ul:hover{
-        color: #9356DC;
-        cursor: pointer;
-    }
-
-    .fa-store:hover{
-        color: #9356DC;
-        cursor: pointer;
     }
 
     .restaurant{
@@ -442,7 +466,6 @@ h5{
 
     .card a{
         margin: 20px;
-        z-index: 1;
     }
 
     article{
@@ -465,30 +488,6 @@ h5{
         font-size: 20px;
     }
 
-    .fas.fa-heart:hover{
-        opacity: 1;
-        transition: 0.25s;
-        font-size: 22px;
-    }
-
-    @-webkit-keyframes opacity {
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
-    }
-
-    @keyframes opacity {
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
-    }
-
     .new{
         left: 230px;
     }
@@ -504,7 +503,7 @@ h5{
     }
 }
 
-/* Responsive Tablette */
+/* VERSION TABLETTE */
 
 @media only screen and (min-width: 768px) and (max-width: 1024px)
 {
