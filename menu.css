@@ -321,7 +321,7 @@ header i{
     justify-content: center;
 }
 
-button{
+.btn p{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -339,7 +339,7 @@ button{
     opacity: 1;
 }
 
-button:hover{
+.btn p:hover{
     cursor: pointer;
     opacity: 0.9;
     box-shadow: 0px 5px 5px 0px black;
@@ -490,7 +490,7 @@ a{
         font-size: 25px;
     }
 
-    .btn button{
+    .btn p{
         margin: 40px;
     }
     .footerlogo h2{
